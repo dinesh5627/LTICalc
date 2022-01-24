@@ -1066,7 +1066,7 @@
                        <button class="buttonStyle" id="tab2Data">Save</button>
                     </div>
                 </div>
-                <!-- <div class="cardBox">
+                <div class="cardBox">
                     <div class="tabTitle">
                         <h4 class="fontW500">Company</h4>
                     </div>
@@ -1108,7 +1108,7 @@
                    <div class="ctaSaveBackBox">
                        <button class="buttonStyle" id="tab2Data">Save</button>
                     </div>
-                </div> -->
+                </div>
             </div>
             
         </div>
