@@ -13,8 +13,15 @@
     <script src="js/global.js"></script>
 </head>
 <body>
-    
-    <div class="popUpHolder firstScreen">
+    <div class="progressOuter">
+        <img src="images/loader.svg">
+        <div class='progress' id="progress_div">
+            <div class='bar' id='bar1'></div>
+            <div class='progressBar' id='percent1'></div>
+        </div>
+        <p>Generating ROI Report</p>
+    </div>
+    <div class="popUpHolder firstScreen" style="display: none;">
         <div class="overLayDiv"></div>
         <div class="popUpHolderInner">
             <img src="images/popupLogo.svg" class="logoPartner">
@@ -857,14 +864,15 @@
                 <div class="counterScreen">
                     <h5>1/5</h5>
                 </div>
-               <span class="headTitleImg">
+                <span class="headTitleImg">
                     <img src="images/company.svg">
                 </span>
            </div>
            <div class="cardBoxHolder">
-                <div class="cardBox">
+                <div class="cardBox" id="mobileCardBox1" style="display: flex;">
                     <div class="tabTitle">
                         <h4 class="fontW500">Company</h4>
+                        <h5 class="rightTitle">Revenue</h5>
                     </div>
                     <div class="cardBoxData">
                        <h3 class="fontW700 font30">What is your industry?</h3>
@@ -902,12 +910,13 @@
                        </div>
                    </div>
                    <div class="ctaSaveBackBox">
-                       <button class="buttonStyle" id="tab2Data">Save</button>
+                       <button class="buttonStyle" id="mobileSaveCard1">Save</button>
                     </div>
                 </div>
-                <div class="cardBox">
+                <div class="cardBox" id="mobileCardBox2">
                     <div class="tabTitle">
                         <h4 class="fontW500">Company</h4>
+                        <h5 class="rightTitle">Revenue</h5>
                     </div>
                     <div class="cardBoxData">
                        <h3 class="fontW700 font30">What is your company size?</h3>
@@ -919,12 +928,13 @@
                         <p class="font18 fontW500 greyColor">*The calculator is currently calbirated for larger companies with 2,000+ employees</p>
                    </div>
                    <div class="ctaSaveBackBox">
-                       <button class="buttonStyle" id="tab2Data">Save</button>
+                       <button class="buttonStyle" id="mobileSaveCard2">Save</button>
                     </div>
                 </div>
-                <div class="cardBox">
+                <div class="cardBox" id="mobileCardBox3">
                     <div class="tabTitle">
                         <h4 class="fontW500">Company</h4>
+                        <h5 class="rightTitle">Revenue</h5>
                     </div>
                     <div class="cardBoxData">
                        <h3 class="fontW700 font30">Rank you maturity across the following areas:</h3>
@@ -1063,54 +1073,423 @@
                        </div>
                    </div>
                    <div class="ctaSaveBackBox">
-                       <button class="buttonStyle" id="tab2Data">Save</button>
+                       <button class="buttonStyle" id="mobileSaveCard3">Save</button>
                     </div>
                 </div>
-                <div class="cardBox">
+                <div class="cardBox" id="mobileCardBox4">
                     <div class="tabTitle">
-                        <h4 class="fontW500">Company</h4>
+                        <h5 class="leftTitle">Company</h5>
+                        <h4 class="fontW500">Revenue</h4>
+                        <h5 class="rightTitle">salesforce</h5>
                     </div>
                     <div class="cardBoxData">
-                       <h3 class="fontW700 font30">What is your industry?</h3>
-                       <div class="industryInner">
-                           <div class="industryBox active">
-                               <img src="images/Industry/1.svg">
-                               <p class="font18 fontW500">Media and<br> Entertainment</p>
-                               <input type="radio" name="industry" value="Media and Entertainment">
+                       <h3 class="fontW700 font30">What is your company revenue?</h3>
+                       <div class="inputBoxUSDText">
+                            <div class="USDText">USD</div>
+                            <div class="inputElement">
+                                <input type="text" name="name" placeholder="enter name">
+                            </div>
+                       </div>
+                   </div>
+                   <div class="ctaSaveBackBox">
+                       <button class="buttonStyle" id="mobileSaveCard4">Save</button>
+                    </div>
+                </div>
+                <div class="cardBox" id="mobileCardBox5">
+                    <div class="tabTitle">
+                        <h5 class="leftTitle">Company</h5>
+                        <h4 class="fontW500">Revenue</h4>
+                        <h5 class="rightTitle">salesforce</h5>
+                    </div>
+                    <div class="cardBoxData">
+                       <h3 class="fontW700 font30">What is your company revenue by channel ?</h3>
+                       <div class="inputElementData">
+                           <div class="col_33">
+                               <div class="inputElement">
+                                    <span class="inputName">Direct Sales</span>
+                                    <input type="text" name="name" placeholder="enter a value">
+                                    <span class="percentageSign">%</span>
+                                </div>
                            </div>
-                           <div class="industryBox">
-                               <img src="images/Industry/2.svg">
-                               <p class="font18 fontW500">Health and<br> lifescience</p>
-                               <input type="radio" name="industry" value="Health and lifescience">
+                           <div class="col_33">
+                               <div class="inputElement">
+                                    <span class="inputName">Partner/ Distributor</span>
+                                    <input type="text" name="name" placeholder="enter a value">
+                                    <span class="percentageSign">%</span>
+                                </div>
                            </div>
-                           <div class="industryBox">
-                               <img src="images/Industry/3.svg">
-                               <p class="font18 fontW500">Software and<br> technology</p>
-                               <input type="radio" name="industry" value="Software and technology">
-                           </div>
-                           <div class="industryBox">
-                               <img src="images/Industry/4.svg">
-                               <p class="font18 fontW500">Consumer<br> goods</p>
-                               <input type="radio" name="industry" value="Consumer goods">
-                           </div>
-                           <div class="industryBox">
-                               <img src="images/Industry/5.svg">
-                               <p class="font18 fontW500">Manufacturing</p>
-                               <input type="radio" name="industry" value="Manufacturing">
-                           </div>
-                           <div class="industryBox">
-                               <img src="images/Industry/6.svg">
-                               <p class="font18 fontW500">Others</p>
-                               <input type="radio" name="industry" value="Others">
+                           <div class="col_33">
+                               <div class="inputElement">
+                                    <span class="inputName">Self Service</span>
+                                    <input type="text" name="name" placeholder="enter a value">
+                                    <span class="percentageSign">%</span>
+                                </div>
                            </div>
                        </div>
                    </div>
                    <div class="ctaSaveBackBox">
-                       <button class="buttonStyle" id="tab2Data">Save</button>
+                       <button class="buttonStyle" id="mobileSaveCard5">Save</button>
+                    </div>
+                </div>
+                <div class="cardBox" id="mobileCardBox6">
+                    <div class="tabTitle">
+                        <h5 class="leftTitle">Company</h5>
+                        <h4 class="fontW500">Revenue</h4>
+                        <h5 class="rightTitle">salesforce</h5>
+                    </div>
+                    <div class="cardBoxData">
+                       <h3 class="fontW700 font30">What is your company revenue by composition ?</h3>
+                       <div class="inputElementData col_50Data">
+                           <div class="col_50">
+                               <div class="inputElement">
+                                    <span class="inputName">Product</span>
+                                    <input type="text" name="name" placeholder="enter a value">
+                                    <span class="percentageSign">%</span>
+                                </div>
+                           </div>
+                           <div class="col_50">
+                               <div class="inputElement">
+                                    <span class="inputName">Services</span>
+                                    <input type="text" name="name" placeholder="enter a value">
+                                    <span class="percentageSign">%</span>
+                                </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="ctaSaveBackBox">
+                       <button class="buttonStyle" id="mobileSaveCard6">Save</button>
+                    </div>
+                </div>
+                <div class="cardBox" id="mobileCardBox7">
+                    <div class="tabTitle">
+                        <h5 class="leftTitle">Company</h5>
+                        <h4 class="fontW500">Revenue</h4>
+                        <h5 class="rightTitle">salesforce</h5>
+                    </div>
+                    <div class="cardBoxData">
+                       <h3 class="fontW700 font30">What % of revenue is currently supported by Salesforce platform ?</h3>
+                       <div class="inputElementData col_100Data">
+                           <div class="col_100">
+                               <div class="inputElement">
+                                    <input type="text" name="name" placeholder="enter a value">
+                                </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="ctaSaveBackBox">
+                       <button class="buttonStyle" id="mobileSaveCard7">Save</button>
+                    </div>
+                </div>
+                <div class="cardBox" id="mobileCardBox8">
+                    <div class="tabTitle">
+                        <h5 class="leftTitle">Company</h5>
+                        <h4 class="fontW500">Revenue</h4>
+                        <h5 class="rightTitle">salesforce</h5>
+                    </div>
+                    <div class="cardBoxData">
+                       <h3 class="fontW700 font30">What is your current and projected value for:</h3>
+                        <div class="inputElementData col_50Data">
+                           <div class="col_50">
+                               <div class="inputElement">
+                                    <span class="inputName">Revenue trajectory</span>
+                                    <select name="DirectSales" id="DirectSales">
+                                        <option value="">Select</option>
+                                        <option value="Sales">Sales</option>
+                                        <option value="automation">Automation</option>
+                                        <option value="Quality">Quality Control</option>
+                                    </select>
+                                </div>
+                           </div>
+                           <div class="col_50">
+                               <div class="inputElement">
+                                    <span class="inputName">Profitability</span>
+                                    <select name="PartnerDistributor" id="PartnerDistributor">
+                                        <option value="">Select</option>
+                                        <option value="Sales">Sales</option>
+                                        <option value="automation">Automation</option>
+                                        <option value="Quality">Quality Control</option>
+                                    </select>
+                                </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="ctaSaveBackBox">
+                       <button class="buttonStyle" id="mobileSaveCard8">Save</button>
+                    </div>
+                </div>
+                <div class="cardBox" id="mobileCardBox9">
+                    <div class="tabTitle">
+                        <h5 class="leftTitle">Revenue</h5>
+                        <h4 class="fontW500">salesforce</h4>
+                        <h5 class="rightTitle">Platform</h5>
+                    </div>
+                    <div class="cardBoxData">
+                       <h3 class="fontW700 font30">What's the size of the dedicated team supporting Salesforce environment?</h3>
+                       <div class="inputBoxCompany">
+                           <div class="inputElement">
+                                <input type="text" name="name" placeholder="enter name">
+                            </div>
+                       </div>
+                   </div>
+                   <div class="ctaSaveBackBox">
+                       <button class="buttonStyle" id="mobileSaveCard9">Save</button>
+                    </div>
+                </div>
+                <div class="cardBox" id="mobileCardBox10">
+                    <div class="tabTitle">
+                        <h5 class="leftTitle">Revenue</h5>
+                        <h4 class="fontW500">salesforce</h4>
+                        <h5 class="rightTitle">Platform</h5>
+                    </div>
+                    <div class="cardBoxData">
+                       <h3 class="fontW700 font30">What's the # of internal Salesforce users?</h3>
+                       <div class="inputBoxCompany">
+                           <div class="inputElement">
+                                <input type="text" name="name" placeholder="enter name">
+                            </div>
+                       </div>
+                   </div>
+                   <div class="ctaSaveBackBox">
+                       <button class="buttonStyle" id="mobileSaveCard10">Save</button>
+                    </div>
+                </div>
+                <div class="cardBox" id="mobileCardBox11">
+                    <div class="tabTitle">
+                        <h5 class="leftTitle">Revenue</h5>
+                        <h4 class="fontW500">salesforce</h4>
+                        <h5 class="rightTitle">Platform</h5>
+                    </div>
+                    <div class="cardBoxData">
+                       <h3 class="fontW700 font30">What's the current level of automation in place?</h3>
+                        <div class="inputElementData col_50Data">
+                           <div class="col_50">
+                               <div class="inputElement">
+                                    <span class="inputName">Release management</span>
+                                    <select name="DirectSales" id="DirectSales">
+                                        <option value="">Select</option>
+                                        <option value="Sales">Sales</option>
+                                        <option value="automation">Automation</option>
+                                        <option value="Quality">Quality Control</option>
+                                    </select>
+                                </div>
+                           </div>
+                           <div class="col_50">
+                               <div class="inputElement">
+                                    <span class="inputName">Quality control</span>
+                                    <select name="PartnerDistributor" id="PartnerDistributor">
+                                        <option value="">Select</option>
+                                        <option value="Sales">Sales</option>
+                                        <option value="automation">Automation</option>
+                                        <option value="Quality">Quality Control</option>
+                                    </select>
+                                </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="ctaSaveBackBox">
+                       <button class="buttonStyle" id="mobileSaveCard11">Save</button>
+                    </div>
+                </div>
+                <div class="cardBox" id="mobileCardBox12">
+                    <div class="tabTitle">
+                        <h5 class="leftTitle">Revenue</h5>
+                        <h4 class="fontW500">salesforce</h4>
+                        <h5 class="rightTitle">Platform</h5>
+                    </div>
+                    <div class="cardBoxData">
+                       <h3 class="fontW700 font30">What's the level of customization of the existing Salesforce environment?</h3>
+                       <div class="inputElementData col_100Data">
+                           <div class="col_100">
+                               <div class="inputElement">
+                                    <select name="DirectSales" id="DirectSales">
+                                        <option value="">Select</option>
+                                        <option value="Sales">Sales</option>
+                                        <option value="automation">Automation</option>
+                                        <option value="Quality">Quality Control</option>
+                                    </select>
+                                </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="ctaSaveBackBox">
+                       <button class="buttonStyle" id="mobileSaveCard12">Save</button>
+                    </div>
+                </div>
+                <div class="cardBox" id="mobileCardBox13">
+                    <div class="tabTitle">
+                        <h5 class="leftTitle">salesforce</h5>
+                        <h4 class="fontW500">Platform</h4>
+                        <h5 class="rightTitle">Aspirations</h5>
+                    </div>
+                    <div class="cardBoxData">
+                        <h3 class="fontW700 font30">What Salesforce Adoption across functions [Legacy, 3d Party, Salesforce]?</h3>
+                        <div class="selectOptionData allCtaBox">
+                           <div class="radioButtonData">
+                               <input type="checkbox" name="allCtaBox" value="Sales Cloud" ><span class="font18 fontW500"> Sales Cloud</span>
+                           </div>
+                           <div class="radioButtonData">
+                               <input type="checkbox" name="allCtaBox" value="Marketing Cloud" ><span class="font18 fontW500"> Marketing Cloud</span>
+                           </div>
+                           <div class="radioButtonData">
+                               <input type="checkbox" name="allCtaBox" value="App cloud" ><span class="font18 fontW500"> App cloud</span>
+                           </div>
+                           <div class="radioButtonData">
+                               <input type="checkbox" name="allCtaBox" value="Partner communities" ><span class="font18 fontW500"> Partner communities</span>
+                           </div>
+                           <div class="radioButtonData">
+                               <input type="checkbox" name="allCtaBox" value="Salesforce Einstien" ><span class="font18 fontW500"> Salesforce Einstien</span>
+                           </div>
+                           <div class="radioButtonData">
+                               <input type="checkbox" name="allCtaBox" value="Mulesoft" ><span class="font18 fontW500"> Mulesoft</span>
+                           </div>
+                           <div class="radioButtonData">
+                               <input type="checkbox" name="allCtaBox" value="Commerce" ><span class="font18 fontW500"> Commerce</span>
+                           </div>
+                           <div class="radioButtonData">
+                               <input type="checkbox" name="allCtaBox" value="Customer communities" ><span class="font18 fontW500"> Customer communities</span>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="ctaSaveBackBox">
+                       <button class="buttonStyle" id="mobileSaveCard13">Save</button>
+                    </div>
+                </div>
+                <div class="cardBox" id="mobileCardBox14">
+                    <div class="tabTitle">
+                        <h5 class="leftTitle">salesforce</h5>
+                        <h4 class="fontW500">Aspirations</h4>
+                    </div>
+                    <div class="cardBoxData">
+                       <h3 class="fontW700 font30">What are your Key Aspirations?</h3>
+                       <div class="starRattingHolder">
+                           <div class="questionStar question4">
+                            <h5 class="font18 fontW600">Increase Customer Exerience</h5>
+                               <ul class="ratingW ratingW1">
+                                  <li class="on"><a href="javascript:void(0);"><div class="star star1"></div></a></li>
+                                  <li class="on"><a href="javascript:void(0);"><div class="star star1"></div></a></li>
+                                  <li class="on"><a href="javascript:void(0);"><div class="star star1"></div></a></li>
+                                  <li><a href="javascript:void(0);"><div class="star star1"></div></a></li>
+                                  <li><a href="javascript:void(0);"><div class="star star1"></div></a></li>
+                                </ul>
+                           </div>
+                           <div class="questionStar question5">
+                            <h5 class="font18 fontW600">Optimize Revenue Flow</h5>
+                               <ul class="ratingW ratingW2">
+                                  <li class="on"><a href="javascript:void(0);"><div class="star star2"></div></a></li>
+                                  <li class="on"><a href="javascript:void(0);"><div class="star star2"></div></a></li>
+                                  <li><a href="javascript:void(0);"><div class="star star2"></div></a></li>
+                                  <li><a href="javascript:void(0);"><div class="star star2"></div></a></li>
+                                  <li><a href="javascript:void(0);"><div class="star star2"></div></a></li>
+                                </ul>
+                           </div>
+                           <div class="questionStar question6">
+                            <h5 class="font18 fontW600">Increase Employee Productivity/Experience</h5>
+                               <ul class="ratingW ratingW3">
+                                  <li class="on"><a href="javascript:void(0);"><div class="star"></div></a></li>
+                                  <li><a href="javascript:void(0);"><div class="star"></div></a></li>
+                                  <li><a href="javascript:void(0);"><div class="star"></div></a></li>
+                                  <li><a href="javascript:void(0);"><div class="star"></div></a></li>
+                                  <li><a href="javascript:void(0);"><div class="star"></div></a></li>
+                                </ul>
+                           </div>
+                        </div>
+                   </div>
+                   <div class="ctaSaveBackBox">
+                       <button class="buttonStyle" id="mobileSaveCard14">Save</button>
                     </div>
                 </div>
             </div>
-            
+        </div>
+        <div class="roiReportMobile" id="roiResult15">
+            <div class="progressStatus">
+                <span class="headTitleImg">
+                    <img src="images/company.svg">
+                </span>
+           </div>
+            <div class="tabTitle">
+                <h4 class="fontW500">ROI Report</h4>
+            </div>
+            <div class="innerDataHolder">
+                <div class="headDataReport">                                  
+                    <h5 class="font18 fontW300">This is only indicative data based on the info you have provided. To get a comrehensive report get in touch with our team.</h5>
+                    <button class="buttonStyle">Download Full Report</button>
+                </div>
+               <div class="chartWIthData">
+                    <div class="col_40">
+                        <div class="chartWIthDataInner">
+                            <h3 class="fontW100">New revenue</h3>
+                            <h2 class="fontW700">$303,000,000</h2>
+                            <h4 class="fontW100 ctaStyle"><strong class="fontW700">20%</strong> increase</h4>
+                            <div class="originalRevenueText">
+                                <p class="fontW400 font16">original Revenue: </p><h4 class="fontW600 font16">$300,000,000</h4>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col_60">
+                       <img src="images/chart.png">
+                   </div>
+               </div>
+               <div class="progressBarWithColor">
+                   <div class="progressBarWithColorBox">
+                       <div class="progressImg">
+                           <img src="images/icons/progress.png">
+                       </div>
+                       <div class="progressData">
+                           <p class="font18 fontW600">Additional revenue<br> potential</p>
+                           <h4 class="fontW700">$3,000,000</h4>
+                       </div>
+                   </div>
+                   <div class="progressBarWithColorBox">
+                       <div class="progressImg">
+                           <img src="images/icons/progress.png">
+                       </div>
+                       <div class="progressData">
+                           <p class="font18 fontW600">Operational savings<br> impact</p>
+                           <h4 class="fontW700">$3,000,000</h4>
+                       </div>
+                   </div>
+                   <div class="progressBarWithColorBox">
+                       <div class="progressImg">
+                           <img src="images/icons/progress.png">
+                       </div>
+                       <div class="progressData">
+                           <p class="font18 fontW600">Sales team<br> productivity</p>
+                           <h4 class="fontW700">25% increase</h4>
+                       </div>
+                   </div>
+                   <div class="progressBarWithColorBox">
+                       <div class="progressImg">
+                           <img src="images/icons/progress.png">
+                       </div>
+                       <div class="progressData">
+                           <p class="font18 fontW600">Service team<br> productivity</p>
+                           <h4 class="fontW700">40% increase</h4>
+                       </div>
+                   </div>
+               </div>
+               <div class="chartWIthData">
+                    <div class="col_60">
+                       <img src="images/chart2.png">
+                   </div>
+               </div>
+               <div class="AdditionalReccomeSec">
+                   <h3 class="font20 fontW700">Additional Reccomendations</h3>
+                   <div class="backgroundColorBoxInner">
+                       <p>Create a <span>Personalized channel management experience and community</span> </p>
+                       <div class="backgroundColorBox">
+                           <h5 class="font16 fontW600">Benefits:</h5>
+                           <h4 class="font18 fontW600">Increase in partner revenue up to <strong class="fontW700 font18">12%</strong> </h4>
+                       </div>
+                   </div>
+                   <div class="backgroundColorBoxInner">
+                       <p>Use<span> Integrated marketing automation</span> </p>
+                       <div class="backgroundColorBox">
+                           <h5 class="font16 fontW600">Benefits:</h5>
+                           <h4 class="font18 fontW600">Revenue uplift upto <strong class="fontW700 font18">20%</strong> </h4>
+                       </div>
+                   </div>
+               </div>
+            </div>
         </div>
     </div>
 </body>

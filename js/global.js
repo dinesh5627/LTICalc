@@ -1,4 +1,29 @@
 $(document).ready(function() {
+    if(window.matchMedia("(max-width: 992px)").matches){
+    var width = 100,
+    perfData = window.performance.timing, // The PerformanceTiming interface represents timing-related performance information for the given page.
+    EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+    time = parseInt((EstimatedTime/1000)%60)*100;
+
+    // Loadbar Animation
+    $("#bar1").animate({
+      width: width + "%"
+    }, time);
+    // Fading Out Loadbar on Finised
+    setTimeout(function(){
+      $('.progressOuter').fadeOut(300);
+      $('.popUpHolder').fadeIn(300);
+    }, time);
+    }
+
+});    
+
+
+
+
+
+$(document).ready(function() {
+
     $('.industryBox input').click(function() {
         $('.industryBox input:not(:checked)').parent().removeClass("active");
         $('.industryBox input:checked').parent().addClass("active");
@@ -16,6 +41,7 @@ $(document).ready(function() {
 
     $('.getStarted').click(function() {
         $('.popUpHolder').hide();
+        $('.cardHolderMain').show();
     });
 
 
@@ -96,6 +122,61 @@ $(document).ready(function() {
         }
     });
 
+    function ratingStar4(star){
+    star.click(function(){
+            var stars = $('.question4 .ratingW').find('li')
+            stars.removeClass('on');
+            var thisIndex = $(this).parents('li').index();
+            for(var i=0; i <= thisIndex; i++){
+                stars.eq(i).addClass('on');
+            }
+        // putScoreNow(thisIndex+1);
+        });
+    }
+
+    $(function(){
+        if($('.question4 .ratingW').length > 0){
+                ratingStar4($('.question4 .ratingW li a'));
+        }
+    });
+
+    function ratingStar5(star){
+    star.click(function(){
+            var stars = $('.question5 .ratingW').find('li')
+            stars.removeClass('on');
+            var thisIndex = $(this).parents('li').index();
+            for(var i=0; i <= thisIndex; i++){
+                stars.eq(i).addClass('on');
+            }
+        // putScoreNow(thisIndex+1);
+        });
+    }
+
+    $(function(){
+        if($('.question5 .ratingW').length > 0){
+                ratingStar5($('.question5 .ratingW li a'));
+        }
+    });
+
+    function ratingStar6(star){
+    star.click(function(){
+            var stars = $('.question6 .ratingW').find('li')
+            stars.removeClass('on');
+            var thisIndex = $(this).parents('li').index();
+            for(var i=0; i <= thisIndex; i++){
+                stars.eq(i).addClass('on');
+            }
+        // putScoreNow(thisIndex+1);
+        });
+    }
+
+    $(function(){
+        if($('.question6 .ratingW').length > 0){
+                ratingStar6($('.question6 .ratingW li a'));
+        }
+    });
+
+
 
 });
 
@@ -134,6 +215,67 @@ $(document).ready(function () {
         $('.cardInsideSlider ul').slick('refresh');
         $('.cardInsideSlider ul').slick(RestertSlider());
        
+    });
+
+    $(document).on("click", "#mobileSaveCard1", function () {
+      $('#mobileCardBox1').hide();
+      $('#mobileCardBox2').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard2", function () {
+
+      $('#mobileCardBox2').hide();
+      $('#mobileCardBox3').css('display','flex');      
+      $('.cardInsideSliderMobile ul').slick('refresh');  
+    });
+    $(document).on("click", "#mobileSaveCard3", function () {
+
+      $('#mobileCardBox3').hide();
+      $('#mobileCardBox4').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard4", function () {
+      $('#mobileCardBox4').hide();
+      $('#mobileCardBox5').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard5", function () {
+      $('#mobileCardBox5').hide();
+      $('#mobileCardBox6').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard6", function () {
+      $('#mobileCardBox6').hide();
+      $('#mobileCardBox7').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard7", function () {
+      $('#mobileCardBox7').hide();
+      $('#mobileCardBox8').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard8", function () {
+      $('#mobileCardBox8').hide();
+      $('#mobileCardBox9').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard9", function () {
+      $('#mobileCardBox9').hide();
+      $('#mobileCardBox10').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard10", function () {
+      $('#mobileCardBox10').hide();
+      $('#mobileCardBox11').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard11", function () {
+      $('#mobileCardBox11').hide();
+      $('#mobileCardBox12').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard12", function () {
+      $('#mobileCardBox12').hide();
+      $('#mobileCardBox13').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard13", function () {
+      $('#mobileCardBox13').hide();
+      $('#mobileCardBox14').css('display','flex');        
+    });
+    $(document).on("click", "#mobileSaveCard14", function () {
+      $('#mobileCardBox14').hide();
+      $('.cardHolderMain').hide();
+      $('#roiResult15').css('display','block');        
     });
 
     

@@ -77,7 +77,7 @@ button {
 .col_50{width: 50%;}
 .col_100{width: 100%;}
 
-.popUpHolder {position: relative;display: none;}
+.popUpHolder {position: relative;}
 .overLayDiv{position: fixed;height: 100%;width: 100%;top: 0; left: 0;background-color: rgba(0, 0, 0, 0.4);z-index: 99;}
 .logoPartner{display: block;margin: auto;max-height: 47px;width: 100%; margin-bottom: 20px;}
 .popUpHolderInner{position: relative;background-color: #D4F6F8;z-index: 999; border-radius: 5px;padding: 50px 20px;position: fixed; width: 80%; max-width: 1100px; height: min(720px, 90vh);overflow: auto; top: 50%; left: 50%; transform: translate(-50%,-50%);}
@@ -369,7 +369,7 @@ button {
 
 .AdditionalReccomeSec{position: relative;text-align: left;padding: 40px;    border-top: 1px solid rgb(131 131 131 / 40%);}
 .backgroundColorBoxInner{margin: 20px 0px;border-bottom: 1px solid rgb(131 131 131 / 40%);padding-bottom: 20px;}
-.backgroundColorBoxInner:last-child{border: 0;}
+.backgroundColorBoxInner:last-child{border: 0;margin-bottom: 0;padding-bottom: 0;}
 .AdditionalReccomeSec p{font-size: 18px;line-height: 24px;font-family: BwModelica-Regular;font-weight: 500;max-width: 800px;}
 .AdditionalReccomeSec p span{font-size: 18px;line-height: 24px;font-weight: 600; font-family: BwModelica-Medium;color: rgba(0, 111, 186, 1);}
 .backgroundColorBox{background: #F0F0F0;padding: 20px;display: inline-block;text-align: left;margin: 10px 0 0;}
@@ -400,16 +400,22 @@ button {
 
 
 .greyColor{color: #000;opacity: 0.7;}
-.mobileScreen{display: none;}
-.cardHolderMain{position: relative;padding:20px 30px;margin: 100px 0;}
+.mobileScreen{display: none;margin: auto;max-width: 500px;}
+.cardHolderMain{position: relative;padding:20px 30px;margin: 100px 0;display: none;}
+.roiReportMobile{position: relative;padding:20px 0px;margin: 100px 0 0;text-align: center;display: none;}
 .cardBoxHolder{position: relative;background: #FFFFFF;box-shadow: 3px 4px 12px rgba(0, 0, 140, 0.25); border-radius: 3.83333px;height: min(550px, 90vh);}
 .cardHolderMain:before{content: '';position: absolute;left: 20px;right: 20px; top: 30px;bottom: 70px; height:auto; width: auto;box-shadow: 3px 4px 12px rgba(0, 0, 140, 0.25); border-radius: 3.83333px;}
-.cardBox{position: relative;display: flex;justify-content: center;height: 100%; padding: 50px 0; text-align: center; align-items: center; }
+.cardBox{position: relative;display: none; justify-content: center;height: 100%; padding: 50px 0; text-align: center; align-items: center; }
 .cardBoxData{padding:0px 20px;position: relative;width: 100%;}
 
 .cardHolderMain .progressStatus{position: absolute;left: 0;right: 0;margin: auto;top: -18px;}
+.roiReportMobile .progressStatus{position: absolute;left: 0;right: 0;margin: auto;top: -18px;}
 .tabTitle{font-size: 18px;line-height: 20px;position: absolute;top: -70px;left: 0;right: 0;margin: auto;}
 .tabTitle h4{font-size: 18px;line-height: 20px;}
+.tabTitle h5{font-size: 12px;line-height: 14px;opacity: 0.5;color: #000;}
+.tabTitle h5{position: absolute;bottom: -25px;}
+.leftTitle{left: 0;}
+.rightTitle{right: 0;}
 
 .counterScreen{position: absolute; left: 0; right: 0; margin: auto; text-align: center; top: -45px;}
 .counterScreen h5{color: rgba(0, 0, 0, 0.5);font-size: 9px;line-height: 10px;font-weight: 400;}
@@ -434,6 +440,167 @@ button {
 .backButton{background-color:transparent; border:1px solid rgb(0 0 0 / 25%); outline: none; box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);width: 100%; border-radius: 5px;border-top-right-radius: 0;border-bottom-right-radius: 0;font-family: BwModelica-Regular;font-weight: 500;cursor: pointer; color: #000; font-size: 16px; transition: all 0.3s; line-height: 24px; padding: 10px 30px;text-align: center;}
 .nextButton{background-color: rgba(245, 130, 32, 1); border: 1px solid rgba(245, 130, 32, 1); outline: none; box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);width: 100%; border-radius: 5px; border-top-left-radius: 0;border-bottom-left-radius: 0;font-family: BwModelica-Bold;cursor: pointer; font-weight: 700; color: #fff; font-size: 16px; transition: all 0.3s; line-height: 24px; padding: 10px 30px;text-align: center;}
 
+.roiReportMobile .innerDataHolder{padding: 0;}
+.roiReportMobile .tabTitle{top: -50px;}
+
+
+.progressOuter{position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%);width:80%;max-width: 500px;padding: 40px;}
+.progress 
+{
+ position: relative;
+ left: 0px;
+ top: 0px;
+ width: 100%;
+ height:5px;
+ margin: 10px 0 20px;
+}
+.bar 
+{ 
+  background-color:rgba(0, 0, 140, 1); 
+  width:0%; 
+  height:5px; 
+  border-radius: 3px; 
+  position: absolute;
+  left: 0;
+}
+.progressBar
+{ 
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 5px;
+  width: 100%;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+}
+.progressOuter p{font-size: 14px;line-height: 20px;margin-top: 20px;}
+
+.progressOuter{text-align: center;margin: auto;}
+.progressOuter img{height: 120px;width: 120px;display: block;margin: auto;}
+
+
+
+
+.preloader-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0; 
+  bottom: 0;
+  background: rgba(0,0,0,1);
+  z-index : 2; 
+}
+
+.percentage {
+  z-index: 100;
+  border: 1px solid #ccc;
+  text-align:center;
+  color: #fff;
+  line-height: 30px;
+  font-size : 15px;
+}
+
+.loader,
+.percentage{
+  height: 30px;
+  max-width: 500px; 
+  border: 2px solid #69AF23;
+  border-radius: 20px;
+  font-weight: 300;
+  position: absolute; 
+  top: 0; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  margin : auto; 
+}
+.loader:after,
+.percentage:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.trackbar {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.99;
+}
+
+.loadbar {
+  width: 0%;
+  height: 100%;
+  background: repeating-linear-gradient(
+  45deg, 
+    #008737, 
+    #008737 10px, 
+    #69AF23 10px,
+    #69AF23 20px
+  ); /* Stripes Background Gradient */
+  box-shadow: 0px 0px 14px 1px #008737; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: flicker 5s infinite;
+  overflow: hidden;
+}
+
+.glow {
+  width: 0%;
+  height: 0%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 60px 10px #008737;
+  position: absolute;
+  bottom: -5px;
+  animation: animation 5s infinite;
+}
+
+@keyframes animation {
+  10% {
+    opacity: 0.9;
+  }
+  30% {
+    opacity: 0.86;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.75;
+  }
+}
+
+.wrap { 
+  background-image : url(http://wallpaperfx.com/view_image/little-girls-1600x900-wallpaper-5569.jpg);
+  background-position: left top; 
+  background-repeat: no-repeat; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: cover; 
+  width: 100%; 
+  height: 100%; 
+  position: relative;  
+  z-index : 1; 
+}
+
+.copyrights { 
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 14px;
+  color: #fff;
+  display: block;
+}
 @media all and (max-width: 1600px) {
 
   .title{font-size: 24px;line-height: 30px;}
@@ -569,5 +736,33 @@ button {
   .radioButtonData{width: 100%;margin: 10px auto;max-width: 150px;}
   .cardInsideSliderMobile{max-width: 100%;}
   .selectOptionData{display: block;max-width: 100%;}
+  .selectOptionData.allCtaBox{display: flex;max-width: 100%;}
+  .selectOptionData.allCtaBox .radioButtonData{margin: 5px;display: flex;align-items: center;min-height: 50px;}
   .buttonStyle:hover{background-color: rgba(245, 130, 32, 1); color: #fff; border: 1px solid rgba(245, 130, 32, 1);}
+  .USDText{border: 0;}
+  .roiReportMobile .headDataReport h5{color: rgba(119, 119, 119, 1);margin: 30px 0 20px;}
+  .roiReportMobile .headDataReport .buttonStyle{font-family: BwModelica-Medium;font-weight:600;}
+  .chartWIthData{padding: 20px;}
+  .chartWIthDataInner{padding: 0;}
+  .chartWIthData .col_60{margin: 0;}
+  .progressBarWithColor{margin:-5px 15px;background: transparent;box-shadow: none;}
+  .progressBarWithColorBox{margin: 5px;width: calc(50% - 10px);padding: 5px; background: #DEDEDE;box-shadow: 0px 0px 1px rgb(0 0 0 / 25%); border-radius: 5px;}
+  .progressData p{font-size: 10px;line-height: 14px;}
+  .progressData h4{font-size: 12px;line-height: 14px;}
+  .chartWIthData h3{font-size: 14px;line-height: 16px;}
+  .chartWIthData h2{font-size: 24px;line-height: 26px;margin-bottom: 0;}
+  .AdditionalReccomeSec{padding: 20px;}
+  .innerDataHolder h3{font-size: 14px;line-height: 20px;}
+  .AdditionalReccomeSec p{font-size: 12px;line-height: 18px;}
+  .AdditionalReccomeSec p span{font-size: 12px;line-height: 18px;}
+  .backgroundColorBox h5{font-size: 12px;line-height: 18px;}
+  .backgroundColorBox{padding: 15px;}
+  .popUpForm .inputElement{margin-bottom: 20px;}
+  .popUpInnerBox h5{margin: 0px 0 20px;}
+  .title{margin-bottom: 10px;}
+  .inputElement .inputName{font-size: 12px;margin-bottom: 0;}
+  .inputElement input{padding: 8px 10px;font-size: 14px;}
+  .inputElement select{padding: 8px 10px;font-size: 14px;}
+  .popUpForm .col_100{margin: 0;width: 100%;}
+  .percentageSign{bottom: 10px;}
 }
