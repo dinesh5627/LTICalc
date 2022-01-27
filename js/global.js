@@ -12,7 +12,7 @@ $(document).ready(function() {
     // Fading Out Loadbar on Finised
     setTimeout(function(){
       $('.progressOuter').fadeOut(300);
-      $('.popUpHolder').fadeIn(300);
+      $('.firstScreen').fadeIn(300);
     }, time);
     }
 
@@ -42,6 +42,14 @@ $(document).ready(function() {
     $('.getStarted').click(function() {
         $('.popUpHolder').hide();
         $('.cardHolderMain').show();
+    });
+
+    $('.DownloadCta').click(function() {
+        $('.thankYou').fadeIn();
+    });
+
+    $('.reloadPage').click(function() {
+        location.reload();
     });
 
 

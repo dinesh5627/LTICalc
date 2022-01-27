@@ -849,7 +849,7 @@
                                    </div>
                                 </div>
                                 <div class="ctaSaveBackBox FixedBottomCta">
-                                   <button class="buttonStyle">Download Full Report</button>
+                                   <button class="buttonStyle DownloadCta">Download Full Report</button>
                                 </div> 
                             </div>
                         </div>
@@ -1412,7 +1412,7 @@
             <div class="innerDataHolder">
                 <div class="headDataReport">                                  
                     <h5 class="font18 fontW300">This is only indicative data based on the info you have provided. To get a comrehensive report get in touch with our team.</h5>
-                    <button class="buttonStyle">Download Full Report</button>
+                    <button class="buttonStyle DownloadCta">Download Full Report</button>
                 </div>
                <div class="chartWIthData">
                     <div class="col_40">
@@ -1498,7 +1498,7 @@
             <div class="popUpInnerBox">
                 <h2 class="title">Thank you</h2>
                 <h5 class="font18 fontW300">Your report has been sent to your email id</h5>
-                <button class="buttonStyle getStarted" type="button">Back to Main Page</button>
+                <button class="buttonStyle reloadPage" type="button">Back to Main Page</button>
             </div>
         </div>
     </div>
