@@ -601,6 +601,13 @@ button {
   color: #fff;
   display: block;
 }
+
+.thankYou .popUpHolderInner{height: min(300px, 400px);max-width: 500px;}
+.thankYou .popUpHolderInner .popUpInnerBox{display: flex; flex-direction: column; height: calc(100% - 50px); align-items: center; justify-content: center;}
+.thankYou .popUpHolderInner .popUpInnerBox .buttonStyle{margin: 0;}
+
+
+
 @media all and (max-width: 1600px) {
 
   .title{font-size: 24px;line-height: 30px;}
@@ -765,4 +772,5 @@ button {
   .inputElement select{padding: 8px 10px;font-size: 14px;}
   .popUpForm .col_100{margin: 0;width: 100%;}
   .percentageSign{bottom: 10px;}
+  .popUpHolder{display: none;}
 }

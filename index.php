@@ -21,7 +21,7 @@
         </div>
         <p>Generating ROI Report</p>
     </div>
-    <div class="popUpHolder firstScreen" style="display: none;">
+    <div class="popUpHolder firstScreen">
         <div class="overLayDiv"></div>
         <div class="popUpHolderInner">
             <img src="images/popupLogo.svg" class="logoPartner">
@@ -1489,6 +1489,16 @@
                        </div>
                    </div>
                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popUpHolder thankYou" style="display: none;">
+        <div class="overLayDiv"></div>
+        <div class="popUpHolderInner">
+            <div class="popUpInnerBox">
+                <h2 class="title">Thank you</h2>
+                <h5 class="font18 fontW300">Your report has been sent to your email id</h5>
+                <button class="buttonStyle getStarted" type="button">Back to Main Page</button>
             </div>
         </div>
     </div>
